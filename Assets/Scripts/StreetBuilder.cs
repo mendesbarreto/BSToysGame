@@ -6,14 +6,17 @@ public sealed class StreetBuilder : MonoBehaviour {
 
 	//VARIAÇÕES
 	public GameObject cityStreet;
-	public GameObject country;
-	public GameObject highway;
+	public GameObject countryStreet;
+	public GameObject highwayStreet;
 	private GameObject mainStreet;
 
 	//CONTROLADOR DE REPETIÇÕES DE PISTA
 	[SerializeField]
 	private int timeChange = 3; 
-	private int cont = 0;
+	private int timeChangeCounter = 0;
+
+	public static bool isDestroyed = false;
+
 
 	private void Start(){
 		mainStreet = cityStreet;
@@ -25,33 +28,34 @@ public sealed class StreetBuilder : MonoBehaviour {
 	}
 
 	private void ChangeStreet(){
-		if (cont == timeChange && mainStreet == cityStreet) 
+		if (timeChangeCounter == timeChange && mainStreet == cityStreet) 
 		{
-			mainStreet = highway;
-			cont = 0;
+			mainStreet = highwayStreet;
+			timeChangeCounter = 0;
 		} 
-		else if (cont == timeChange && mainStreet == highway) 
+		else if (timeChangeCounter == timeChange && mainStreet == highwayStreet) 
 		{
-			mainStreet = country;
-			cont = 0;
+			mainStreet = countryStreet;
+			timeChangeCounter = 0;
 		} 
-		else if (cont == timeChange && mainStreet == country) 
+		else if (timeChangeCounter == timeChange && mainStreet == countryStreet) 
 		{
 			mainStreet = cityStreet;
-			cont = 0;
+			timeChangeCounter = 0;
 		}
+
 	}
 
 
 	private void SpawnStreet() {
-		if (MoveStreet.isDestroyed == true) 
+		if (isDestroyed == true) 
 		{
 			Vector3 spawnPoint = new Vector3 (transform.position.x, transform.position.y, transform.position.z-1);//LOCAL DO SPAWN
 			Instantiate (mainStreet, spawnPoint, Quaternion.identity);
 
-			MoveStreet.isDestroyed = false;
-			cont++;
+			isDestroyed = false;
+			timeChangeCounter++;
 		}
-
 	}
+
 }

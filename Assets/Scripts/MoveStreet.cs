@@ -6,7 +6,6 @@ public sealed class MoveStreet : MonoBehaviour {
 
 	[SerializeField]
 	private float speedStreet = -1;
-	public static bool isDestroyed = false;
 	const float MAX_DISTANCE = -100;
 
 	private void Update () {
@@ -18,7 +17,7 @@ public sealed class MoveStreet : MonoBehaviour {
 	{
 		if (gameObject.transform.position.z == MAX_DISTANCE)
 		{
-			isDestroyed = true;
+			StreetBuilder.isDestroyed = true;
 			Destroy (gameObject);
 		}
 	}
