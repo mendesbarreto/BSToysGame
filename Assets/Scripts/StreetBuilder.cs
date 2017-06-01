@@ -5,9 +5,26 @@ using UnityEngine;
 public sealed class StreetBuilder : MonoBehaviour {
 
 	//VARIAÇÕES
-	public GameObject cityStreet;
-	public GameObject countryStreet;
-	public GameObject highwayStreet;
+	public GameObject HighwayStreet {
+		get {return highwayStreet; }
+		set { highwayStreet = value; }
+	}
+	[SerializeField]
+	private GameObject highwayStreet;
+
+	public GameObject CountryStreet {
+		get {return countryStreet; }
+		set { countryStreet = value; }
+	}
+	[SerializeField]
+	private GameObject countryStreet;
+
+	public GameObject CityStreet {
+		get {return cityStreet; }
+		set { cityStreet = value; }
+	}
+	[SerializeField]
+	private GameObject cityStreet;
 	private GameObject mainStreet;
 
 	//CONTROLADOR DE REPETIÇÕES DE PISTA
@@ -15,7 +32,16 @@ public sealed class StreetBuilder : MonoBehaviour {
 	private int timeChange = 3; 
 	private int timeChangeCounter = 0;
 
-	public static bool isDestroyed = false;
+	public bool IsDestroyed {
+		get{return isDestroyed;}
+		set
+		{
+			print ("Is Destroyed was set:");
+			print (value);
+			isDestroyed = value;
+		}
+	}
+	private bool isDestroyed = false;
 
 
 	private void Start(){
