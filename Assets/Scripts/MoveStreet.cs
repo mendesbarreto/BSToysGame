@@ -4,14 +4,14 @@ using UnityEngine;
 
 public sealed class MoveStreet : MonoBehaviour {
 
-	const float MAX_DISTANCE = -100;
+	private const float MAX_DISTANCE = -100;
 
 	private float SpeedStreet {
 		get {return speedStreet;}
 		set {speedStreet = value;}
 	}
 	[SerializeField]
-	private float speedStreet = -1;
+	private float speedStreet = 10f;
 
 	private StreetBuilder StreetBuilder {
 		get{return streetBuilder;}
@@ -24,11 +24,7 @@ public sealed class MoveStreet : MonoBehaviour {
 	}
 
 	private void Update () {
-		if (isStreetDistanceAt(MAX_DISTANCE)) {
-			Destroy();
-		} else {
-			MoveStreetForward ();
-		}
+		MoveStreetForward ();
 	}
 
 	private void MoveStreetForward() {
@@ -46,7 +42,6 @@ public sealed class MoveStreet : MonoBehaviour {
 
 	private void Destroy()
 	{
-		streetBuilder.IsDestroyed = true;
-		Destroy (gameObject);
+		//gameObject.SetActive (false);
 	}
 }
