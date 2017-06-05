@@ -52,11 +52,11 @@ public sealed class StreetControler : MonoBehaviour {
 
 
 	private void ChangePosition(){
-		currentStreet.transform.position = new Vector3 (currentStreet.transform.position.x, currentStreet.transform.position.y, oldPosition() + defaultStreetDiamiter);
+		currentStreet.transform.position = new Vector3 (currentStreet.transform.position.x, currentStreet.transform.position.y, OldPosition() + defaultStreetDiamiter);
 	}
 
 	private void ChangeCurrentStreet(){
-		if (verifyCurrentStreet ()) 
+		if (VerifyCurrentStreet ()) 
 		{
 			currentStreet = secondObjStreet;
 		}
@@ -66,8 +66,8 @@ public sealed class StreetControler : MonoBehaviour {
 		}
 	}
 
-	private float oldPosition(){
-		if (verifyCurrentStreet ()) 
+	private float OldPosition(){
+		if (VerifyCurrentStreet ()) 
 		{
 			return secondObjStreet.transform.position.z;
 		} 
@@ -77,7 +77,7 @@ public sealed class StreetControler : MonoBehaviour {
 		}
 	}
 
-	private bool verifyCurrentStreet(){
+	private bool VerifyCurrentStreet(){
 		if (currentStreet == firstObjStreet) 
 		{
 			return true;
