@@ -23,10 +23,8 @@ public sealed class StreetControler : MonoBehaviour {
 	private int defaultStreetDiamiter = 100;
 	private const float MAX_DISTANCE = -100;
 	private GameObject currentStreet;
-	private float nextPositionZ;
 
 	private void Start(){
-		
 		LoadResources ();
 	}
 
@@ -44,7 +42,8 @@ public sealed class StreetControler : MonoBehaviour {
 
 
 	private bool VerifyDistance(){
-		if (currentStreet.transform.position.z == MAX_DISTANCE) {
+		if (currentStreet.transform.position.z == MAX_DISTANCE) 
+		{
 			Debug.Log ("currentStreet trigou");
 			return true;
 		}
@@ -57,23 +56,35 @@ public sealed class StreetControler : MonoBehaviour {
 	}
 
 	private void ChangeCurrentStreet(){
-		if (verifyCurrentStreet())
+		if (verifyCurrentStreet ()) 
+		{
 			currentStreet = secondObjStreet;
-		else
+		}
+		else 
+		{
 			currentStreet = firstObjStreet;
+		}
 	}
 
 	private float oldPosition(){
-		if (verifyCurrentStreet ())
+		if (verifyCurrentStreet ()) 
+		{
 			return secondObjStreet.transform.position.z;
-		else
+		} 
+		else 
+		{
 			return firstObjStreet.transform.position.z;
+		}
 	}
 
 	private bool verifyCurrentStreet(){
-		if (currentStreet == firstObjStreet)
+		if (currentStreet == firstObjStreet) 
+		{
 			return true;
-		else
+		} 
+		else 
+		{
 			return false;
+		}
 	}
 }

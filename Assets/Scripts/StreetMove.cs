@@ -4,10 +4,6 @@ using UnityEngine;
 
 public sealed class StreetMove : MonoBehaviour {
 
-	private float SpeedStreet {
-		get {return speedStreet;}
-		set {speedStreet = value;}
-	}
 	[SerializeField]
 	private float speedStreet = -1;
 
