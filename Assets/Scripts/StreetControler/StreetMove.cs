@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public sealed class StreetMove : MonoBehaviour {
-
-	[SerializeField]
+    
 	private float speedStreet = -1;
 
 	private void Update () {

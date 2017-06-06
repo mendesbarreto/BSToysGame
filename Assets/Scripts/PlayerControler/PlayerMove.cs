@@ -8,16 +8,19 @@ public class PlayerMove : MonoBehaviour {
 	private Rigidbody playerRb;
 	[SerializeField]
 	private float speedPlayer = 5;
-	private float position;
+	
 
 	//POSICOES POSSIVEIS
-	private float left = -4;
-	private float mid;
-	private float right = 4.5f;
+	private readonly float left = -4;
+    private readonly float mid = 0;
+    private readonly float right = 4.5f;
 
-    private int leftPointer = 0;
-    private int midPointer = 1;
-    private int rightPointer = 2;
+    private float position;
+
+    private readonly int leftPointer = 0;
+    private readonly int midPointer = 1;
+    private readonly int rightPointer = 2;
+
     private int positionPointer;
 
 
@@ -26,7 +29,7 @@ public class PlayerMove : MonoBehaviour {
 
     //EFEITO CURVA
     private readonly float rangeCurve = 30;
-    private Vector3 curve;
+    private Vector3 curve = Vector3.zero;
 	private float CurveTimecounter = 0.3f;
 	private const int SPEED_ROTACAO = 10;
 	private const int SPEED_VOLTA_ROTACAO = 130;
@@ -39,8 +42,8 @@ public class PlayerMove : MonoBehaviour {
 
 	private void LoadResources() {
 		playerRb = GetComponent<Rigidbody>();
-
         positionPointer = midPointer;
+        position = mid;
     }
 
 

@@ -55,7 +55,7 @@ public class SelectPlayer : MonoBehaviour {
     }
 
 
-    private void LoadScene()
+    private static void LoadScene()
     {
         SceneManager.LoadScene("Game");
     }
