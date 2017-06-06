@@ -26,19 +26,7 @@ public class PlayerBuilder : MonoBehaviour {
 	private GameObject playerBlack;
 
 
-
-    //ARRUMAR DAQUI EM DIANTE --------------------------------------------------
-    private int Player = SelectPlayer.PlayerSelect;
-	
-
-
-
-
-
-
-
-
-
+    private readonly int Player = SelectPlayer.PlayerSelect;
 
 	private void Start () 
 	{

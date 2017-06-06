@@ -27,50 +27,38 @@ public class SelectPlayer : MonoBehaviour {
 	[SerializeField]
 	private Button playerBlack;
 
-
-
-
-    //ARRUMAR DAQUI EM DIANTE -----------------------------------------------------------
     public static int PlayerSelect
     {
         get { return playerSelect; }
         set { playerSelect = value; }
     }
     private static int playerSelect;
-	
-
-	/*private static readonly SelectPlayer instance = new SelectPlayer();
-	public static SelectPlayer Instance
-	{
-		get 
-		{
-			return instance; 
-		}
-	}
-	private SelectPlayer(){}
-*/
 
 
-
-
-	public void SelectWhite()
+    public void SelectWhite()
 	{
 		PlayerSelect = 0;
-		SceneManager.LoadScene("Game");
-	}
+        LoadScene();
+    }
 
-	public void SelectRed()
+    public void SelectRed()
 	{
 		PlayerSelect = 1;
-		SceneManager.LoadScene("Game");
-	}
+        LoadScene();
+    }
 
 	public void SelectBlack()
 	{
 		PlayerSelect = 2;
-		SceneManager.LoadScene("Game");
-	}
+        LoadScene();
 
+    }
+
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene("Game");
+    }
 
 
 }

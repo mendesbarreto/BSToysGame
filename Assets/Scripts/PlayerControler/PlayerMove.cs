@@ -11,16 +11,22 @@ public class PlayerMove : MonoBehaviour {
 	private float position;
 
 	//POSICOES POSSIVEIS
-	[SerializeField]
 	private float left = -4;
-	[SerializeField]
-	private float mid = 0;
-	[SerializeField]
+	private float mid;
 	private float right = 4.5f;
 
-	//EFEITO CURVA
-	private float rangeCurve = 30;
-	private Vector3 curve = new Vector3(0, 0, 0);
+    private int leftPointer = 0;
+    private int midPointer = 1;
+    private int rightPointer = 2;
+    private int positionPointer;
+
+
+
+
+
+    //EFEITO CURVA
+    private readonly float rangeCurve = 30;
+    private Vector3 curve;
 	private float CurveTimecounter = 0.3f;
 	private const int SPEED_ROTACAO = 10;
 	private const int SPEED_VOLTA_ROTACAO = 130;
@@ -34,7 +40,8 @@ public class PlayerMove : MonoBehaviour {
 	private void LoadResources() {
 		playerRb = GetComponent<Rigidbody>();
 
-	}
+        positionPointer = midPointer;
+    }
 
 
 	private void FixedUpdate()
@@ -47,27 +54,39 @@ public class PlayerMove : MonoBehaviour {
 
 	private void Controler()
 	{
-		if (Input.GetKeyDown ("d")) {
-			if (position == left) {
-				position = mid;
-			} else if (position == mid) {
-				position = right;
-			}
-			curve.y = rangeCurve;
-			CurveTimecounter = 0.3f;
-		}
 
-		if (Input.GetKeyDown ("a")) {
-			if (position == right) {
-				position = mid;
-			} else if (position == mid) {
-				position = left;
-			}
-			curve.y = -rangeCurve;
-			CurveTimecounter = 0.3f;
-		}
+        if (Input.GetKeyDown("d"))
+        {
+            if (positionPointer == leftPointer)
+            {
+                position = mid;
+                positionPointer = midPointer;
+            }
+            else if (positionPointer == midPointer)
+            {
+                position = right;
+                positionPointer = rightPointer;
+            }
+            curve.y = rangeCurve;
+            CurveTimecounter = 0.3f;
+        }
 
-	}
+        if (Input.GetKeyDown("a"))
+        {
+            if (positionPointer == rightPointer)
+            {
+                position = mid;
+                positionPointer = midPointer;
+            }
+            else if (positionPointer == midPointer)
+            {
+                position = left;
+                positionPointer = leftPointer;
+            }
+            curve.y = -rangeCurve;
+            CurveTimecounter = 0.3f;
+        }
+    }
 
 
 	private void Move(){
