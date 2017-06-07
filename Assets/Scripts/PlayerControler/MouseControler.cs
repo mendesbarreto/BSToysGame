@@ -12,11 +12,11 @@ public class MouseControler : MonoBehaviour {
 
     //POSICOES POSSIVEIS
     private readonly float left = -4;
-    private readonly float mid;
+    private readonly float mid = 0;
     private readonly float right = 4.5f;
     private float position;
 
-    private readonly int leftPointer;
+    private readonly int leftPointer = 0;
     private readonly int midPointer = 1;
     private readonly int rightPointer = 2;
     private int positionPointer;
