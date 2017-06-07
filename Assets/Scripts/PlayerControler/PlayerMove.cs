@@ -12,11 +12,11 @@ public class PlayerMove : MonoBehaviour {
 
 	//POSICOES POSSIVEIS
 	private readonly float left = -4;
-    private readonly float mid = 0;
+    private readonly float mid; //0
     private readonly float right = 4.5f;
     private float position;
 
-    private readonly int leftPointer = 0;
+    private readonly int leftPointer; //0
     private readonly int midPointer = 1;
     private readonly int rightPointer = 2;
     private int positionPointer;
@@ -30,8 +30,7 @@ public class PlayerMove : MonoBehaviour {
 
     //SWIPE
     private Vector2 firstPressPos;
-    private Vector2 secondPressPos;
-    private Vector2 currentSwipe;
+
 
 
     private void Start(){
@@ -65,8 +64,8 @@ public class PlayerMove : MonoBehaviour {
             }
             if (t.phase == TouchPhase.Ended)
             {
-                secondPressPos = new Vector2(t.position.x, t.position.y);
-                currentSwipe = new Vector3(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
+                var secondPressPos = new Vector2(t.position.x, t.position.y);
+                var currentSwipe = new Vector3(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
                 currentSwipe.Normalize();
 
                 //SWIPE LEFT
@@ -103,39 +102,6 @@ public class PlayerMove : MonoBehaviour {
                 }
             }
         }
-        /* 
-        if (Input.GetKeyDown("d"))
-        {
-            if (positionPointer == leftPointer)
-            {
-                position = mid;
-                positionPointer = midPointer;
-            }
-            else if (positionPointer == midPointer)
-            {
-                position = right;
-                positionPointer = rightPointer;
-            }
-            curve.y = rangeCurve;
-            CurveTimecounter = 0.3f;
-        }
-
-        if (Input.GetKeyDown("a"))
-        {
-            if (positionPointer == rightPointer)
-            {
-                position = mid;
-                positionPointer = midPointer;
-            }
-            else if (positionPointer == midPointer)
-            {
-                position = left;
-                positionPointer = leftPointer;
-            }
-            curve.y = -rangeCurve;
-            CurveTimecounter = 0.3f;
-        }*/
-    
     }
     
 

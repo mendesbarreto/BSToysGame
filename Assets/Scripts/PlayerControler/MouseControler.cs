@@ -12,11 +12,11 @@ public class MouseControler : MonoBehaviour {
 
     //POSICOES POSSIVEIS
     private readonly float left = -4;
-    private readonly float mid = 0;
+    private readonly float mid;
     private readonly float right = 4.5f;
     private float position;
 
-    private readonly int leftPointer = 0;
+    private readonly int leftPointer;
     private readonly int midPointer = 1;
     private readonly int rightPointer = 2;
     private int positionPointer;
@@ -30,8 +30,6 @@ public class MouseControler : MonoBehaviour {
 
     //SWIPE
     private Vector2 firstPressPos;
-    private Vector2 secondPressPos;
-    private Vector2 currentSwipe;
 
 
     private void Start()
@@ -65,8 +63,8 @@ public class MouseControler : MonoBehaviour {
             }
             if (Input.GetMouseButtonUp(0))
             {
-                secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-                currentSwipe = new Vector2(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
+                var secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+                var currentSwipe = new Vector2(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
                 currentSwipe.Normalize();
 
                 //SWIPE LEFT
