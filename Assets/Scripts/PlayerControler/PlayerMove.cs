@@ -14,18 +14,12 @@ public class PlayerMove : MonoBehaviour {
 	private readonly float left = -4;
     private readonly float mid = 0;
     private readonly float right = 4.5f;
-
     private float position;
 
     private readonly int leftPointer = 0;
     private readonly int midPointer = 1;
     private readonly int rightPointer = 2;
-
     private int positionPointer;
-
-
-
-
 
     //EFEITO CURVA
     private readonly float rangeCurve = 30;
@@ -34,8 +28,13 @@ public class PlayerMove : MonoBehaviour {
 	private const int SPEED_ROTACAO = 10;
 	private const int SPEED_VOLTA_ROTACAO = 130;
 
+    //SWIPE
+    private Vector2 firstPressPos;
+    private Vector2 secondPressPos;
+    private Vector2 currentSwipe;
 
-	private void Start(){
+
+    private void Start(){
 		LoadResources ();
 	}
 
@@ -47,7 +46,7 @@ public class PlayerMove : MonoBehaviour {
     }
 
 
-	private void FixedUpdate()
+	private void Update()
 	{
 		Controler();
 		Move();
@@ -57,7 +56,54 @@ public class PlayerMove : MonoBehaviour {
 
 	private void Controler()
 	{
+        if (Input.touches.Length > 0)
+        {
+            Touch t = Input.GetTouch(0);
+            if (t.phase == TouchPhase.Began)
+            {
+                firstPressPos = new Vector2(t.position.x, t.position.y);
+            }
+            if (t.phase == TouchPhase.Ended)
+            {
+                secondPressPos = new Vector2(t.position.x, t.position.y);
+                currentSwipe = new Vector3(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
+                currentSwipe.Normalize();
 
+                //SWIPE LEFT
+                if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+                {
+                    if (positionPointer == rightPointer)
+                    {
+                        position = mid;
+                        positionPointer = midPointer;
+                    }
+                    else if (positionPointer == midPointer)
+                    {
+                        position = left;
+                        positionPointer = leftPointer;
+                    }
+                    curve.y = -rangeCurve;
+                    CurveTimecounter = 0.3f;
+                }
+                //SWIPE RIGHT
+                if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+                {
+                    if (positionPointer == leftPointer)
+                    {
+                        position = mid;
+                        positionPointer = midPointer;
+                    }
+                    else if (positionPointer == midPointer)
+                    {
+                        position = right;
+                        positionPointer = rightPointer;
+                    }
+                    curve.y = rangeCurve;
+                    CurveTimecounter = 0.3f;
+                }
+            }
+        }
+        /* 
         if (Input.GetKeyDown("d"))
         {
             if (positionPointer == leftPointer)
@@ -88,8 +134,10 @@ public class PlayerMove : MonoBehaviour {
             }
             curve.y = -rangeCurve;
             CurveTimecounter = 0.3f;
-        }
+        }*/
+    
     }
+    
 
 
 	private void Move(){
