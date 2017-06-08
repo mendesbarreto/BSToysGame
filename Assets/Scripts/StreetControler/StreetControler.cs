@@ -44,7 +44,6 @@ public sealed class StreetControler : MonoBehaviour {
 	private bool VerifyDistance(){
 		if (currentStreet.transform.position.z == MAX_DISTANCE) 
 		{
-			Debug.Log ("currentStreet trigou");
 			return true;
 		}
 		return false;
