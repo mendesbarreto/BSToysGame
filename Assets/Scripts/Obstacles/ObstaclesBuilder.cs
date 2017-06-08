@@ -112,10 +112,15 @@ public class ObstaclesBuilder : MonoBehaviour {
 		case 2:
 			localSpawn = new Vector3(4.5f, 1.55f, 100);
 			break;
+		default:
+			Debug.Log ("Unexpected value localSpawn = " + localSpawn);
+			break;
 		}
 		return localSpawn;
 	}
-
-
+		
 }
+
+
+
 
