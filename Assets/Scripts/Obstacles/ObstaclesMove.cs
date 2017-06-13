@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ObstaclesMove : MonoBehaviour {
 
-	private const float velocity = 45;
-	private const float timeLife = 3;
+	private const float velocity = 25;
+	private const float timeLife = 5;
+
+
 
 	void OnEnable()
 	{
@@ -25,6 +27,7 @@ public class ObstaclesMove : MonoBehaviour {
 	private void Update()
 	{
 		transform.position -= new Vector3 (0, 0, velocity) * Time.deltaTime;
+	
 	}
 
 

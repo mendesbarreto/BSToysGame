@@ -11,9 +11,9 @@ public class PlayerMove : MonoBehaviour {
 	
 
 	//POSICOES POSSIVEIS
-	private readonly float left = -4;
+	private readonly float left = -1;//-4;
     private readonly float mid = 0;
-    private readonly float right = 4.5f;
+	private readonly float right = 0.96f;//4.5f;
     private float position;
 
     private readonly int leftPointer = 0;

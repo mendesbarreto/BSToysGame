@@ -12,6 +12,12 @@ public class ObstaclesBuilder : MonoBehaviour {
 	private int countTimeDifficulty;
 	private float timerSpawn;
 
+
+	//LOCAIS POSSIVEIS
+	private readonly Vector3 left = new Vector3	(-1, 1.82f, 100);//(-4, 1.82f, 100);
+	private readonly Vector3 mid = new Vector3 (0, 1.82f, 100);//(0, 1.82f, 100);
+	private readonly Vector3 right = new Vector3 (0.96f, 1.82f, 100);//(4.5f, 1.82f, 100);
+
 	//OBSTACULOS
 	public GameObject Obstacles {
 		get { return obstacles; }
@@ -104,13 +110,13 @@ public class ObstaclesBuilder : MonoBehaviour {
 		switch (randomSpawn)
 		{
 		case 0:
-		 	localSpawn = new Vector3(0, 1.55f, 100);
+			localSpawn = mid;
 			break;
 		case 1:
-			localSpawn = new Vector3(-4, 1.55f, 100);
+			localSpawn = left;
 			break;
 		case 2:
-			localSpawn = new Vector3(4.5f, 1.55f, 100);
+			localSpawn = right;
 			break;
 		default:
 			Debug.Log ("Unexpected value localSpawn = " + localSpawn);
