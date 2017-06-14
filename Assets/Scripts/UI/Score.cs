@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour {
+public sealed class Score : MonoBehaviour {
 
 	public Text TxtScore{
 		get {return txtScore; }
@@ -41,7 +41,7 @@ public class Score : MonoBehaviour {
 	}
 
 	private void WriteScore(){
-		txtScore.text = "Score: " + score.ToString();
+		txtScore.text = "SCORE: " + score.ToString();
 	}
 		
 }

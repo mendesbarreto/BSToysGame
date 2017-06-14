@@ -25,8 +25,7 @@ public class PlayerBuilder : MonoBehaviour {
 	[SerializeField]
 	private GameObject playerBlack;
 
-
-    private readonly int Player = SelectPlayer.PlayerSelect;
+    private readonly int Player = MenuSelect.PlayerSelect;
 
 	private void Start () 
 	{
