@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public sealed class Score : MonoBehaviour {
 
@@ -12,7 +13,14 @@ public sealed class Score : MonoBehaviour {
 	[SerializeField]
 	private Text txtScore; 
 
-	private int score;
+
+	public static int ScoreManager
+	{
+		get { return score; }
+		set { score = value; }
+	}
+	private static int score;
+
 	private float perSecond = 0.1f;
 
 	private void Start(){
@@ -22,10 +30,13 @@ public sealed class Score : MonoBehaviour {
 	private void LoadResources() {
 		txtScore = GameObject.Find("Score").GetComponent<Text>();
 		score = 0;
+
 	}
 
 	private void Update () {
-		CountScore ();
+		if (VerifyPlayerLive ()) {
+			CountScore ();
+		}
 		WriteScore ();
 	}
 
@@ -44,4 +55,16 @@ public sealed class Score : MonoBehaviour {
 		txtScore.text = "SCORE: " + score.ToString();
 	}
 		
+
+	private bool VerifyPlayerLive(){
+	
+		if (PlayerStatus.IsLive) {
+			return true;
+		} 
+		else {
+			SceneManager.LoadScene("GameOver");
+			return false;
+		}
+	}
+
 }

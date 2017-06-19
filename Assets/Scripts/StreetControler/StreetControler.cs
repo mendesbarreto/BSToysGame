@@ -42,7 +42,7 @@ public sealed class StreetControler : MonoBehaviour {
 
 
 	private bool VerifyDistance(){
-		if (currentStreet.transform.position.z == MAX_DISTANCE) 
+		if (currentStreet.transform.position.z <= MAX_DISTANCE) 
 		{
 			return true;
 		}

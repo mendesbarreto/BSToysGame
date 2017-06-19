@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 750d82841f9ef4c508f0dc2f088cbf4d
   - enabled: 1
+    path: Assets/Scenes/TopScore.unity
+    guid: 76539a77f45744e86b8673bfccd5fab6
+  - enabled: 1
     path: Assets/Scenes/MenuSelect.unity
     guid: 476e2c7d10690b14c9f9c24beea99e76
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 0a0ddf57734d28f4aa5dcf4cd90704ef
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: f438d1a7be19a4f4eb8111fca22a23ea
   - enabled: 0
     path: Assets/CityMotoRacer/Scene/splashScreen.unity
     guid: 17c76a26955e05040a555a1531e173b8

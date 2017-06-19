@@ -11,6 +11,6 @@ public sealed class StreetMove : MonoBehaviour {
 	}
 
 	private void MoveStreetForward() {
-		gameObject.transform.Translate (0, 0, speedStreet); //MOVIMENTAÇÃO DA PISTA
+		gameObject.transform.Translate (0, 0, -25 * Time.deltaTime);
 	}
 }

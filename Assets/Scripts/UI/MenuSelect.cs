@@ -42,6 +42,7 @@ public class MenuSelect : MonoBehaviour {
 
 	private void LoadResources()
 	{
+		
 		positionPointer = midPointer;
 		position = mid;
 		playerSelect = white;

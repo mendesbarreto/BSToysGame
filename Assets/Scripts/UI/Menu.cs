@@ -37,6 +37,13 @@ public sealed class Menu : MonoBehaviour {
 	[SerializeField]
 	private Button credits;
 
+	public Button Quit {
+		get { return quit; }
+		set { quit = value; }
+	}
+	[SerializeField]
+	private Button quit;
+
 
 	public void PlayPress()
 	{
@@ -45,7 +52,7 @@ public sealed class Menu : MonoBehaviour {
 
 	public void ScorePress()
 	{
-		Debug.Log("Score button");
+		SceneManager.LoadScene("TopScore");
 	}
 
 	public void QRCodePress()
@@ -56,5 +63,10 @@ public sealed class Menu : MonoBehaviour {
 	public void CreditsPress()
 	{
 		Debug.Log("Credits button");
+	}
+
+	public void QuitPress()
+	{
+		Application.Quit();
 	}
 }

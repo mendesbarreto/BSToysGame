@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HudGame : MonoBehaviour {
 
@@ -12,6 +13,18 @@ public class HudGame : MonoBehaviour {
 	}
 	[SerializeField]
 	private Text txtVelocity; 
+
+	//PAUSE
+	[SerializeField]
+	private Canvas PauseScreen;
+
+	public Button ButtonPause {
+		get {return pause; }
+		set { pause = value; }
+	}
+	[SerializeField]
+	private Button pause;
+
 
 	private int velocity;
 	private float perSecond = 1;
@@ -57,6 +70,10 @@ public class HudGame : MonoBehaviour {
 		txtVelocity.text = velocity.ToString();
 	}
 
-
+	public void PausePress()
+	{
+		Time.timeScale = 0.0f;
+		PauseScreen.enabled = true;
+	}
 
 }
