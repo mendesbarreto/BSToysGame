@@ -70,7 +70,7 @@ public class MenuSelect : MonoBehaviour {
 
 	}
 
-    
+    /*
 	//SWIPE CONTROLER
 	private void Controler()
 	{
@@ -122,8 +122,8 @@ public class MenuSelect : MonoBehaviour {
 			}
 		}
 	}
-	
-    /*
+	*/
+    
 
     //MOUSE CONTROLER
     private void Controler()
@@ -174,7 +174,7 @@ public class MenuSelect : MonoBehaviour {
 			}
 		}
 	}
-    */
+    
 
 	private void Move()
 	{
