@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class MenuSelect : MonoBehaviour {
 
 	//POSICOES POSSIVEIS
-	private readonly float left = -15;//-4;
+	private readonly float left = -15;
 	private readonly float mid = 0;
-	private readonly float right = 15;//4.5f;
+	private readonly float right = 15;
 	private float position;
 
 	private readonly int leftPointer = 0;
@@ -19,7 +19,7 @@ public class MenuSelect : MonoBehaviour {
 
 	//SWIPE
 	private Vector2 firstPressPos;
-	private readonly float speedCam = 5; 
+	private readonly float speedCam = 8; 
 
 	//PLAYER TYPE
 	private const int white = 0;
@@ -62,9 +62,6 @@ public class MenuSelect : MonoBehaviour {
         transform.position = new Vector3(position, transform.position.y, transform.position.z);
     }
 
-
-
-
 	private void Update()
 	{
        
@@ -73,7 +70,7 @@ public class MenuSelect : MonoBehaviour {
 
 	}
 
-    /*
+    
 	//SWIPE CONTROLER
 	private void Controler()
 	{
@@ -125,8 +122,8 @@ public class MenuSelect : MonoBehaviour {
 			}
 		}
 	}
-	*/
-
+	
+    /*
 
     //MOUSE CONTROLER
     private void Controler()
@@ -177,7 +174,7 @@ public class MenuSelect : MonoBehaviour {
 			}
 		}
 	}
-
+    */
 
 	private void Move()
 	{

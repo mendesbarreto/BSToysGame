@@ -12,6 +12,7 @@ TagManager:
   - coin
   - SpeedParticle
   - Obstacles
+  - DATA
   layers:
   - Default
   - TransparentFX

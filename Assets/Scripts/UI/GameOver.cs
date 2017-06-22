@@ -48,7 +48,8 @@ public class GameOver : MonoBehaviour {
 	private void LoadResources() {
 		
 		txtScore.text = "SCORE: " + MainGameStatus.instance._score.ToString();
-	}
+        
+    }
 
 
 

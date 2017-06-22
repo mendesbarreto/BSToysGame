@@ -22,6 +22,7 @@ public class SelectCanvas : MonoBehaviour {
 
 	private static void LoadScene()
 	{
+        MainGameStatus.instance._playGame = true;
 		SceneManager.LoadScene("Game");
 	}
 }
