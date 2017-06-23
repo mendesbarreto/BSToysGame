@@ -6,8 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuSelect : MonoBehaviour {
 
-	//POSICOES POSSIVEIS
-	private readonly float left = -15;
+
+    public AudioSource SwipeSound
+    {
+        get { return swipeSound; }
+        set { swipeSound = value; }
+    }
+    [SerializeField]
+    private AudioSource swipeSound;
+
+
+
+
+    //POSICOES POSSIVEIS
+private readonly float left = -15;
 	private readonly float mid = 0;
 	private readonly float right = 15;
 	private float position;
@@ -28,6 +40,8 @@ public class MenuSelect : MonoBehaviour {
 
 	private void Start()
 	{
+      
+
             LoadResources();
             ChangeCamera();
 	}
@@ -142,24 +156,29 @@ public class MenuSelect : MonoBehaviour {
 			//SWIPE LEFT
 			if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
 			{
-				if (positionPointer == leftPointer)
+                swipeSound.Play();
+                if (positionPointer == leftPointer)
 				{
 					position = mid;
 					positionPointer = midPointer;
                     MainGameStatus.instance._playerselect = white;
+
+                   
 				}
 				else if (positionPointer == midPointer)
 				{
 					position = right;
 					positionPointer = rightPointer;
                     MainGameStatus.instance._playerselect = black;
+
 				}
 			}
 
 			//SWIPE RIGHT
 			if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
 			{
-				if (positionPointer == rightPointer)
+                swipeSound.Play();
+                if (positionPointer == rightPointer)
 				{
 					position = mid;
 					positionPointer = midPointer;

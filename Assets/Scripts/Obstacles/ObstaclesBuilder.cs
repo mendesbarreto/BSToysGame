@@ -25,7 +25,33 @@ public class ObstaclesBuilder : MonoBehaviour {
 	}
 	[SerializeField]
 	private GameObject obstacles;
-	private const int qntdObstacles = 20;
+
+    public GameObject ObstaclesTruck
+    {
+        get { return obstaclesTruck; }
+        set { obstaclesTruck = value; }
+    }
+    [SerializeField]
+    private GameObject obstaclesTruck;
+
+    public GameObject ObstaclesTruck2
+    {
+        get { return obstaclesTruck2; }
+        set { obstaclesTruck2 = value; }
+    }
+    [SerializeField]
+    private GameObject obstaclesTruck2;
+
+    public GameObject ObstaclesTruck3
+    {
+        get { return obstaclesTruck3; }
+        set { obstaclesTruck3 = value; }
+    }
+    [SerializeField]
+    private GameObject obstaclesTruck3;
+
+
+    private const int qntdObstacles = 5;
 	List<GameObject> obstaclesList;
 	private int LastPointer = 5;
 
@@ -43,10 +69,21 @@ public class ObstaclesBuilder : MonoBehaviour {
 		obstaclesList = new List<GameObject> ();
 		for (int i = 0; i < qntdObstacles; i++) 
 		{
-			GameObject obj = (GameObject)Instantiate (obstacles);
-			obj.SetActive (false);
+                GameObject obj = (GameObject)Instantiate(obstacles);
+                GameObject obj2 = (GameObject)Instantiate(obstaclesTruck);
+                GameObject obj3 = (GameObject)Instantiate(obstaclesTruck2);
+                GameObject obj4 = (GameObject)Instantiate(obstaclesTruck3);
+
+
+            obj.SetActive (false);
 			obstaclesList.Add (obj);
-		}
+            obj2.SetActive(false);
+            obstaclesList.Add(obj2);
+            obj3.SetActive(false);
+            obstaclesList.Add(obj3);
+            obj4.SetActive(false);
+            obstaclesList.Add(obj4);
+        }
 	}
 
 
