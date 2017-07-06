@@ -6,10 +6,9 @@ public class MainGameStatus : MonoBehaviour {
 
     public bool _playGame;
     public bool _isLive;
-
     public int _score;
     public int _playerselect;
-    
+    public int _gameStats;
 
     //Rank
     public int _firstScore;
@@ -30,6 +29,8 @@ public class MainGameStatus : MonoBehaviour {
     {
         //PlayerPrefs.DeleteAll();
         LoadResources();
+
+        
     }
 
     private void LoadResources()
@@ -37,6 +38,16 @@ public class MainGameStatus : MonoBehaviour {
         _score = 0;
         _playGame = false;
         _isLive = true;
+       
+
+        if (PlayerPrefs.HasKey("gameStats"))
+        {
+            _gameStats = PlayerPrefs.GetInt("gameStats");
+        } else {
+
+            PlayerPrefs.SetInt("gameStats", _gameStats);
+        }
+
 
         if (PlayerPrefs.HasKey("PlayerType")) {
             _playerselect = PlayerPrefs.GetInt("PlayerType");
@@ -77,10 +88,17 @@ public class MainGameStatus : MonoBehaviour {
             ChangeRanking();      
         }
 
-
-        
-
+        Unlock();
     }
+
+    private void Unlock()
+    {
+        if (_gameStats == 1)
+        {
+            PlayerPrefs.SetInt("gameStats", _gameStats);
+        }
+    }
+
 
     private void LoadPlayerType()
     {

@@ -23,15 +23,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: f438d1a7be19a4f4eb8111fca22a23ea
-  - enabled: 0
-    path: Assets/CityMotoRacer/Scene/splashScreen.unity
-    guid: 17c76a26955e05040a555a1531e173b8
-  - enabled: 0
-    path: Assets/CityMotoRacer/Scene/MainMenu.unity
-    guid: 9fee4e9d43d16af468731901fccb8571
-  - enabled: 0
-    path: Assets/CityMotoRacer/Scene/highWayGameplay.unity
-    guid: f92c4cc6e37444e0cb489f9503e44e5f
-  - enabled: 0
-    path: Assets/CityMotoRacer/Scene/cityGameplay.unity
-    guid: e61f3a434a1e78f4eae4b2b650c161b7

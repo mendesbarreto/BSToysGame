@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObstaclesMove : MonoBehaviour {
 
-	private const float velocity = 25;
-	private const float timeLife = 5;
+	private const float velocity = 17;
+	private const float timeLife = 8;
 
 
 

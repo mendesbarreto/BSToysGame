@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public sealed class Menu : MonoBehaviour {
 
-	public Button Play {
+    [SerializeField]
+    private Canvas CodeScreen;
+
+    public Button Play {
 		get {return play; }
 		set { play = value; }
 	}
@@ -22,12 +25,12 @@ public sealed class Menu : MonoBehaviour {
 	private Button score;
 
 
-	public Button QRCode {
-		get {return qrCode; }
-		set { qrCode = value; }
+	public Button Code {
+		get {return code; }
+		set { code = value; }
 	}
 	[SerializeField]
-	private Button qrCode;
+	private Button code;
 
 
 	public Button Credits {
@@ -44,8 +47,59 @@ public sealed class Menu : MonoBehaviour {
 	[SerializeField]
 	private Button quit;
 
+    public Text TxtLock
+    {
+        get { return txtLock; }
+        set { txtLock = value; }
+    }
+    [SerializeField]
+    private Text txtLock;
 
-	public void PlayPress()
+    private void Start()
+    {
+        LoadResources();
+    }
+    private void LoadResources()
+    {
+        txtLock = GameObject.Find("X").GetComponent<Text>();
+        if (MainGameStatus.instance._gameStats == 1)
+        {
+            txtLock.enabled = false;
+            Play.enabled = true;
+        }
+        else
+        {
+            txtLock.enabled = true;
+            Play.enabled = false;
+        }
+    }
+
+    
+    private void Update()
+    {
+        if (CodeScreen.enabled == false)
+        {
+            Quit.enabled = true;
+            Credits.enabled = true;
+            Code.enabled = true;
+            Score.enabled = true;
+            VerifyUnlock();
+        }
+
+       
+    }
+    
+
+    private void VerifyUnlock()
+    {
+        if (MainGameStatus.instance._gameStats == 1)
+        {
+            txtLock.enabled = false;
+            Play.enabled = true;
+        }
+    }
+
+    public void PlayPress()
 	{
 		SceneManager.LoadScene("MenuSelect");
 	}
@@ -55,10 +109,15 @@ public sealed class Menu : MonoBehaviour {
 		SceneManager.LoadScene("TopScore");
 	}
 
-	public void QRCodePress()
+	public void CodePress()
 	{
-		Debug.Log("QR Code button");
-	}
+        CodeScreen.enabled = true;
+        Quit.enabled = false;
+        Credits.enabled = false;
+        Code.enabled = false;
+        Score.enabled = false;
+        Play.enabled = false;
+    }
 
 	public void CreditsPress()
 	{

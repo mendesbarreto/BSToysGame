@@ -115,7 +115,14 @@ private readonly float left = -15;
 						position = right;
 						positionPointer = rightPointer;
                          MainGameStatus.instance._playerselect = black;
-					}
+					}else
+                {
+                    position = left;
+                    positionPointer = leftPointer;
+                    MainGameStatus.instance._playerselect = red;
+
+                    Loop();
+                }
 				}
 				//SWIPE RIGHT
 				if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
@@ -131,14 +138,21 @@ private readonly float left = -15;
 						position = left;
 						positionPointer = leftPointer;
                          MainGameStatus.instance._playerselect = red;
-					}
+					} else {
+                   
+                    position = right;
+                    positionPointer = rightPointer;
+                    MainGameStatus.instance._playerselect = black;
+
+                    Loop();
+                }
 				}
 			}
 		}
 	}
-	*/
-    
+	
 
+*/
     //MOUSE CONTROLER
     private void Controler()
 	{
@@ -171,7 +185,14 @@ private readonly float left = -15;
 					positionPointer = rightPointer;
                     MainGameStatus.instance._playerselect = black;
 
-				}
+                }else
+                {
+                    position = left;
+                    positionPointer = leftPointer;
+                    MainGameStatus.instance._playerselect = red;
+
+                    Loop();
+                }
 			}
 
 			//SWIPE RIGHT
@@ -190,10 +211,18 @@ private readonly float left = -15;
 					positionPointer = leftPointer;
                     MainGameStatus.instance._playerselect = red;
 				}
-			}
+                else
+                {
+                    position = right;
+                    positionPointer = rightPointer;
+                    MainGameStatus.instance._playerselect = black;
+
+                    Loop();
+                }
+            }
 		}
 	}
-    
+   
 
 	private void Move()
 	{
@@ -203,6 +232,14 @@ private readonly float left = -15;
 
 
 
-
+    private void Loop()
+    {
+        if(position < 0)
+        transform.position = new Vector3(position + 10, transform.position.y, transform.position.z);
+        else
+        {
+            transform.position = new Vector3(position - 10, transform.position.y, transform.position.z);
+        }
+    }
 
 }

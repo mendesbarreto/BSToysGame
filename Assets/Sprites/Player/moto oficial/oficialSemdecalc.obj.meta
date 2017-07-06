@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 58dfc28ad78211a4a97b7f3687b70247
+timeCreated: 1498659923
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Superf___cie_72_Superf___cie_72_mesh_purple
+    100004: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart0
+    100006: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart1
+    100008: Superf___cie_72_Superf___cie_72_Metal01
+    100010: Superf___cie_72_Superf___cie_72_Metal01_MeshPart0
+    100012: Superf___cie_72_Superf___cie_72_Metal01_MeshPart1
+    100014: Superf___cie_72_Superf___cie_72_Metal14
+    100016: Superf___cie_72_Superf___cie_72_Metal14_MeshPart0
+    100018: Superf___cie_72_Superf___cie_72_Metal14_MeshPart1
+    100020: Superf___cie_72_Superf___cie_72_Metal19
+    100022: Superf___cie_72_Superf___cie_72_mold_blue
+    100024: Superf___cie_72_Superf___cie_72_mold_cyan
+    100026: Superf___cie_72_Superf___cie_72_mold_green
+    100028: Superf___cie_72_Superf___cie_72_mold_orange
+    100030: Superf___cie_72_Superf___cie_72_mold_yellow
+    100032: Superf___cie_72_Superf___cie_72_Silk01
+    100034: Superf___cie_72_Superf___cie_72_Silk11
+    100036: Superf___cie_72_Superf___cie_72_Silk11_MeshPart0
+    100038: Superf___cie_72_Superf___cie_72_Silk11_MeshPart1
+    100040: Superf___cie_72_Superf___cie_72_Silk11_MeshPart2
+    100042: Superf___cie_72_Superf___cie_72_Silk19
+    100044: Superf___cie_72_Superf___cie_72_Silk19_MeshPart0
+    100046: Superf___cie_72_Superf___cie_72_Silk19_MeshPart1
+    100048: Superf___cie_72_Superf___cie_72_Silk22
+    100050: Superf___cie_72_Superf___cie_72_Silk22_MeshPart0
+    100052: Superf___cie_72_Superf___cie_72_Silk22_MeshPart1
+    100054: Superf___cie_72_Superf___cie_72_Silk22_MeshPart2
+    100056: Superf___cie_72_Superf___cie_72_Silk28
+    100058: Superf___cie_72_Superf___cie_72_Tropical13
+    400000: //RootNode
+    400002: Superf___cie_72_Superf___cie_72_mesh_purple
+    400004: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart0
+    400006: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart1
+    400008: Superf___cie_72_Superf___cie_72_Metal01
+    400010: Superf___cie_72_Superf___cie_72_Metal01_MeshPart0
+    400012: Superf___cie_72_Superf___cie_72_Metal01_MeshPart1
+    400014: Superf___cie_72_Superf___cie_72_Metal14
+    400016: Superf___cie_72_Superf___cie_72_Metal14_MeshPart0
+    400018: Superf___cie_72_Superf___cie_72_Metal14_MeshPart1
+    400020: Superf___cie_72_Superf___cie_72_Metal19
+    400022: Superf___cie_72_Superf___cie_72_mold_blue
+    400024: Superf___cie_72_Superf___cie_72_mold_cyan
+    400026: Superf___cie_72_Superf___cie_72_mold_green
+    400028: Superf___cie_72_Superf___cie_72_mold_orange
+    400030: Superf___cie_72_Superf___cie_72_mold_yellow
+    400032: Superf___cie_72_Superf___cie_72_Silk01
+    400034: Superf___cie_72_Superf___cie_72_Silk11
+    400036: Superf___cie_72_Superf___cie_72_Silk11_MeshPart0
+    400038: Superf___cie_72_Superf___cie_72_Silk11_MeshPart1
+    400040: Superf___cie_72_Superf___cie_72_Silk11_MeshPart2
+    400042: Superf___cie_72_Superf___cie_72_Silk19
+    400044: Superf___cie_72_Superf___cie_72_Silk19_MeshPart0
+    400046: Superf___cie_72_Superf___cie_72_Silk19_MeshPart1
+    400048: Superf___cie_72_Superf___cie_72_Silk22
+    400050: Superf___cie_72_Superf___cie_72_Silk22_MeshPart0
+    400052: Superf___cie_72_Superf___cie_72_Silk22_MeshPart1
+    400054: Superf___cie_72_Superf___cie_72_Silk22_MeshPart2
+    400056: Superf___cie_72_Superf___cie_72_Silk28
+    400058: Superf___cie_72_Superf___cie_72_Tropical13
+    2300000: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart0
+    2300002: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart1
+    2300004: Superf___cie_72_Superf___cie_72_Metal01_MeshPart0
+    2300006: Superf___cie_72_Superf___cie_72_Metal01_MeshPart1
+    2300008: Superf___cie_72_Superf___cie_72_Metal14_MeshPart0
+    2300010: Superf___cie_72_Superf___cie_72_Metal14_MeshPart1
+    2300012: Superf___cie_72_Superf___cie_72_Metal19
+    2300014: Superf___cie_72_Superf___cie_72_mold_blue
+    2300016: Superf___cie_72_Superf___cie_72_mold_cyan
+    2300018: Superf___cie_72_Superf___cie_72_mold_green
+    2300020: Superf___cie_72_Superf___cie_72_mold_orange
+    2300022: Superf___cie_72_Superf___cie_72_mold_yellow
+    2300024: Superf___cie_72_Superf___cie_72_Silk01
+    2300026: Superf___cie_72_Superf___cie_72_Silk11_MeshPart0
+    2300028: Superf___cie_72_Superf___cie_72_Silk11_MeshPart1
+    2300030: Superf___cie_72_Superf___cie_72_Silk11_MeshPart2
+    2300032: Superf___cie_72_Superf___cie_72_Silk19_MeshPart0
+    2300034: Superf___cie_72_Superf___cie_72_Silk19_MeshPart1
+    2300036: Superf___cie_72_Superf___cie_72_Silk22_MeshPart0
+    2300038: Superf___cie_72_Superf___cie_72_Silk22_MeshPart1
+    2300040: Superf___cie_72_Superf___cie_72_Silk22_MeshPart2
+    2300042: Superf___cie_72_Superf___cie_72_Silk28
+    2300044: Superf___cie_72_Superf___cie_72_Tropical13
+    3300000: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart0
+    3300002: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart1
+    3300004: Superf___cie_72_Superf___cie_72_Metal01_MeshPart0
+    3300006: Superf___cie_72_Superf___cie_72_Metal01_MeshPart1
+    3300008: Superf___cie_72_Superf___cie_72_Metal14_MeshPart0
+    3300010: Superf___cie_72_Superf___cie_72_Metal14_MeshPart1
+    3300012: Superf___cie_72_Superf___cie_72_Metal19
+    3300014: Superf___cie_72_Superf___cie_72_mold_blue
+    3300016: Superf___cie_72_Superf___cie_72_mold_cyan
+    3300018: Superf___cie_72_Superf___cie_72_mold_green
+    3300020: Superf___cie_72_Superf___cie_72_mold_orange
+    3300022: Superf___cie_72_Superf___cie_72_mold_yellow
+    3300024: Superf___cie_72_Superf___cie_72_Silk01
+    3300026: Superf___cie_72_Superf___cie_72_Silk11_MeshPart0
+    3300028: Superf___cie_72_Superf___cie_72_Silk11_MeshPart1
+    3300030: Superf___cie_72_Superf___cie_72_Silk11_MeshPart2
+    3300032: Superf___cie_72_Superf___cie_72_Silk19_MeshPart0
+    3300034: Superf___cie_72_Superf___cie_72_Silk19_MeshPart1
+    3300036: Superf___cie_72_Superf___cie_72_Silk22_MeshPart0
+    3300038: Superf___cie_72_Superf___cie_72_Silk22_MeshPart1
+    3300040: Superf___cie_72_Superf___cie_72_Silk22_MeshPart2
+    3300042: Superf___cie_72_Superf___cie_72_Silk28
+    3300044: Superf___cie_72_Superf___cie_72_Tropical13
+    4300000: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart0
+    4300002: Superf___cie_72_Superf___cie_72_mesh_purple_MeshPart1
+    4300004: Superf___cie_72_Superf___cie_72_Metal01_MeshPart0
+    4300006: Superf___cie_72_Superf___cie_72_Metal01_MeshPart1
+    4300008: Superf___cie_72_Superf___cie_72_Metal14_MeshPart0
+    4300010: Superf___cie_72_Superf___cie_72_Metal14_MeshPart1
+    4300012: Superf___cie_72_Superf___cie_72_Metal19
+    4300014: Superf___cie_72_Superf___cie_72_mold_blue
+    4300016: Superf___cie_72_Superf___cie_72_mold_cyan
+    4300018: Superf___cie_72_Superf___cie_72_mold_green
+    4300020: Superf___cie_72_Superf___cie_72_mold_orange
+    4300022: Superf___cie_72_Superf___cie_72_mold_yellow
+    4300024: Superf___cie_72_Superf___cie_72_Silk01
+    4300026: Superf___cie_72_Superf___cie_72_Silk11_MeshPart0
+    4300028: Superf___cie_72_Superf___cie_72_Silk11_MeshPart1
+    4300030: Superf___cie_72_Superf___cie_72_Silk11_MeshPart2
+    4300032: Superf___cie_72_Superf___cie_72_Silk19_MeshPart0
+    4300034: Superf___cie_72_Superf___cie_72_Silk19_MeshPart1
+    4300036: Superf___cie_72_Superf___cie_72_Silk22_MeshPart0
+    4300038: Superf___cie_72_Superf___cie_72_Silk22_MeshPart1
+    4300040: Superf___cie_72_Superf___cie_72_Silk22_MeshPart2
+    4300042: Superf___cie_72_Superf___cie_72_Silk28
+    4300044: Superf___cie_72_Superf___cie_72_Tropical13
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

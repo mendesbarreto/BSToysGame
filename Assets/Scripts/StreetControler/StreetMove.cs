@@ -4,7 +4,7 @@ using UnityEngine;
 
 public sealed class StreetMove : MonoBehaviour {
     
-	private readonly float speedStreet = -25;
+	private readonly float speedStreet = -17;
 
 	private void Update () {
 		MoveStreetForward ();
