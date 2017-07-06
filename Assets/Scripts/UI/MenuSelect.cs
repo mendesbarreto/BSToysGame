@@ -84,7 +84,7 @@ private readonly float left = -15;
 
 	}
 
-    /*
+    
 	//SWIPE CONTROLER
 	private void Controler()
 	{
@@ -152,7 +152,7 @@ private readonly float left = -15;
 	}
 	
 
-*/
+/*
     //MOUSE CONTROLER
     private void Controler()
 	{
@@ -222,7 +222,7 @@ private readonly float left = -15;
             }
 		}
 	}
-   
+   */
 
 	private void Move()
 	{

@@ -58,6 +58,7 @@ public class CodeInput : MonoBehaviour {
         if(code.text == "reset")
         {
             MainGameStatus.instance._gameStats = 0;
+            PlayerPrefs.SetInt("gameStats", MainGameStatus.instance._gameStats);
             PlayerPrefs.DeleteAll();
             txtIncorreto.text = "RESET - ESTADO: " + MainGameStatus.instance._gameStats;
 
