@@ -28,7 +28,7 @@ public sealed class Score : MonoBehaviour {
 	}
 
 	private void LoadResources() {
-		txtScore = GameObject.Find("Score").GetComponent<Text>();
+		//txtScore = GameObject.Find("Score").GetComponent<Text>();
         MainGameStatus.instance._score = 0;
 
 	}
@@ -52,7 +52,7 @@ public sealed class Score : MonoBehaviour {
 	}
 
 	private void WriteScore(){
-		txtScore.text = "SCORE: " + MainGameStatus.instance._score.ToString();
+		txtScore.text = MainGameStatus.instance._score.ToString();
 	}
 		
 

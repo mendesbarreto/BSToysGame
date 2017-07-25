@@ -151,8 +151,8 @@ private readonly float left = -15;
 		}
 	}
 	
+    /*
 
-/*
     //MOUSE CONTROLER
     private void Controler()
 	{
@@ -223,7 +223,7 @@ private readonly float left = -15;
 		}
 	}
    */
-
+    
 	private void Move()
 	{
 		Vector3 final = new Vector3(position, transform.position.y, transform.position.z);

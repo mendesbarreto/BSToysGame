@@ -26,7 +26,16 @@ public class HudGame : MonoBehaviour {
 	private Button pause;
 
 
-	private int velocity;
+    public GameObject Flag
+    {
+        get { return flag; }
+        set { flag = value; }
+    }
+    [SerializeField]
+    private GameObject flag;
+
+
+    private int velocity;
 	private float perSecond = 1;
 	private int gear = 40;
 	private const int MAX_SPEED = 200;
@@ -72,6 +81,7 @@ public class HudGame : MonoBehaviour {
 
 	public void PausePress()
 	{
+        Destroy(flag);
 		Time.timeScale = 0.0f;
 		PauseScreen.enabled = true;
 	}

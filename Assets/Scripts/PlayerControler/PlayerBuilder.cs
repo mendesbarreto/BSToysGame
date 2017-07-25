@@ -34,7 +34,7 @@ public class PlayerBuilder : MonoBehaviour {
 		
 	private void BuildPlayerType()
 	{
-		Instantiate(VerifyPlayerType(), new Vector3 (0f, 1.72f, -23f), Quaternion.identity);
+		Instantiate(VerifyPlayerType(), new Vector3 (0f, 1.72f, -22f), Quaternion.identity);
 	}
 
 	private GameObject VerifyPlayerType(){

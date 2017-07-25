@@ -10,7 +10,6 @@ GameObject:
   - component: {fileID: 486540}
   - component: {fileID: 3389100}
   - component: {fileID: 2323738}
-  - component: {fileID: 9561726}
   - component: {fileID: 6576444}
   m_Layer: 0
   m_Name: Building_03
@@ -40,10 +39,10 @@ MeshRenderer:
   m_GameObject: {fileID: 131024}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 7ee1e1c742d46e849878082e94855183, type: 2}
   m_StaticBatchInfo:
@@ -83,23 +82,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19023713, y: 0.31320179, z: 0.10495993}
   m_Center: {x: 0.002591107, y: 0.15660089, z: 0}
---- !u!95 &9561726
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131024}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c53676a75731336468e95b3e246bc63c, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
