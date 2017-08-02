@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TopScore.unity
     guid: 76539a77f45744e86b8673bfccd5fab6
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8133697f711b3d1449d690953058b59b
+  - enabled: 1
     path: Assets/Scenes/MenuSelect.unity
     guid: 476e2c7d10690b14c9f9c24beea99e76
   - enabled: 1

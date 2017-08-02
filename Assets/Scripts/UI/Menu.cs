@@ -121,8 +121,8 @@ public sealed class Menu : MonoBehaviour {
 
 	public void CreditsPress()
 	{
-		Debug.Log("Credits button");
-	}
+        SceneManager.LoadScene("Credits");
+    }
 
 	public void QuitPress()
 	{

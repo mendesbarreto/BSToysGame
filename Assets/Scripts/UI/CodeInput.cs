@@ -62,7 +62,7 @@ public class CodeInput : MonoBehaviour {
             PlayerPrefs.DeleteAll();
             txtIncorreto.text = "RESET - ESTADO: " + MainGameStatus.instance._gameStats;
 
-        } else if (code.text == "igdsorocaba")
+        } else if (code.text == "bstoys")
             {
                 MainGameStatus.instance._gameStats = 1;
                 code.text = "";
